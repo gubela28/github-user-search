@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="./favicon2.svg">
+    <script src="./login.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>github user search</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">devfinder</h1>
+        <div class="theme-panel">
+        <h3 class="theme-text">dark</h3>
+        <img id="moon" src="./icon-moon.svg" alt="">
+        <img id="sun" src="./icon-sun.svg" alt="">
+        </div>
+    </div>
+    <form class="form card">
+        <img src="./icon-search.svg" alt="search icon">
+        <input type="text" name="user" id="user" placeholder="Search GitHub username…">
+        <button class="btn" type="submit">search</button>
+    </form>
+    <div class="error"></div>
+    <div class="user-info card">
+        <img src="" alt="" class="avatar-desktop">
+        <div class="info">
+        <div class="general">
+            <img src="" alt="avatar" class="avatar-mobile">
+            <div class="personal">
+            <div class="name-info">
+            <h2 class="name"></h2>
+            <h3 class="login"></h3>
+        </div>
+        <p class="join-date"></p>
+        </div>
+        </div>
+        <p class="bio"></p>
+             <div class="stats">
+                <div class="stat">
+                    <h3 class="stat-title">repos</h3>
+                    <h3 class="amount" id="repos"></h3>
+                </div>
+                <div class="stat">
+                    <h3 class="stat-title">followers</h3>
+                    <h3 class="amount" id="followers"></h3>
+                </div>
+                <div class="stat">
+                    <h3 class="stat-title">following</h3>
+                    <h3 class="amount" id="following"></h3>
+                </div>
+             </div>
+             <div class="locations">
+                <div class="location-info">
+                    <img src="./icon-location.svg" alt="location-icon">
+                    <h3 class="location-text" id="city"></h3>
+                </div>
+                <div class="location-info">
+                    <img src="./icon-website.svg" alt="website-icon">
+                    <a href="#" class="location-text location-link" id="blog"></a>
+                </div>
+                <div class="location-info">
+                    <img src="./icon-twitter.svg" alt="twitter-icon">
+                    <h3 class="location-text" id="twitter"></h3>
+                </div>
+                <div class="location-info">
+                    <img src="./icon-company.svg" alt="company-icon">
+                    <h3 class="location-text" id="company"></h3>
+                </div>
+             </div>
+        </div>
+    </div>
+</body>
+</html>
