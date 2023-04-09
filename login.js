@@ -79,12 +79,14 @@ const displayInfo = (user) => {
  following.textContent = user.following;
  if (user.location) {
     city.textContent = user.location;
+    city.parentElement.style.opacity = 1;
  } else {
     city.textContent = "Not Available";
     city.parentElement.style.opacity = 0.5;
  }
  if (user.twitter_username) {
     twitter.textContent = user.twitter_username;
+    twitter.parentElement.style.opacity = 1;
  } else {
     twitter.textContent = "Not Available";
     twitter.parentElement.style.opacity = 0.5;
@@ -92,6 +94,7 @@ const displayInfo = (user) => {
  if (user.blog) {
     blog.textContent = user.blog;
     blog.href = user.blog;
+    blog.parentElement.style.opacity = 1;
  } else {
     blog.textContent = "Not Available";
     blog.href = "#";
@@ -99,6 +102,7 @@ const displayInfo = (user) => {
  }
  if (user.company) {
     company.textContent = user.company;
+    company.parentElement.style.opacity = 1;
  } else {
     company.textContent = "Not Available";
     company.parentElement.style.opacity = 0.5;
@@ -117,10 +121,6 @@ const flipTheme = (theme) => {
         sun.style.display = "none";
         document.body.style.backgroundColor = "#f6f8ff";
     }
-
-    title.classList.toggle("dark");
-    themeText.classList.toggle("dark");
-    input.classList.toggle("dark");
 };
 
 moon.addEventListener("click", () => flipTheme("dark"));
