@@ -302,4 +302,7 @@ body {
         column-gap: 37px;
         padding: 48px;
     }
+    .error {
+        margin-left: 330px;
+    }
 }
